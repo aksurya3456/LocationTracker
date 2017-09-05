@@ -10,6 +10,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -115,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
                     Date date = new Date(timeValue);
                     timeText.setText(date.toString());
 
+
                 }
             }
         };
@@ -185,6 +187,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void stopLocationUpdates(){
         mFusedLOcationClient.removeLocationUpdates(mLocationCallback);
+    }
+
+
+    public void clicked(View view){
+        Toast.makeText(this,"Wait for Updates",Toast.LENGTH_LONG).show();
+
     }
 
 }
